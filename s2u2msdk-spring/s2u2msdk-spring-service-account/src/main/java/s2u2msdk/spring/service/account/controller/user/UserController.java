@@ -2,10 +2,7 @@ package s2u2msdk.spring.service.account.controller.user;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import s2u2msdk.spring.service.account.controller.user.dto.UserInfoDTO;
 import s2u2msdk.spring.service.account.entity.UserEntity;
 import s2u2msdk.spring.service.account.service.UserService;
@@ -24,9 +21,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "/")
-    public UserInfoDTO getUserInfo(@RequestHeader("token") String token) {
-        String id = token;
-        UserEntity userEntity = userService.get(id);
+    public UserInfoDTO getUserInfo(UserEntity userEntity) {
         return new UserInfoDTO()
                 .setNickName(userEntity.getNickName())
                 .setGender(userEntity.getGender())

@@ -19,6 +19,7 @@
         <module>s2u2msdk-spring-core</module>
         <module>s2u2msdk-spring-test</module>
 
+        <module>s2u2msdk-spring-common</module>
         <module>s2u2msdk-spring-service-account</module>
     </modules>
 
