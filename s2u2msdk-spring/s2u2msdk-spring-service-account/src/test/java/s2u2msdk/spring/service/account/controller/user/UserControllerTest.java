@@ -1,5 +1,6 @@
 package s2u2msdk.spring.service.account.controller.user;
 
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import s2u2msdk.spring.test.AbS2u2mControllerTest;
 import s2u2msdk.spring.service.account.entity.UserEntity;
 import s2u2msdk.spring.service.account.enums.GenderEnum;
